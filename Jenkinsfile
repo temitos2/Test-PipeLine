@@ -1,10 +1,9 @@
 pipeline {
-    agent any 
-
+    agent { docker 'python:3.5.1' }
     stages {
         stage('build') {
             steps {
-                sh 'ant -f build.xml -v'
+                sh 'python --version'
             }
         }
     }
