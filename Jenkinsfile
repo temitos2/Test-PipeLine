@@ -1,11 +1,10 @@
 pipeline {
-    agent any { 
-
+    agent { docker 'ruby' }
     stages {
-      stage('build') {
-        sh 'ant -f build.xml -v'
-               
+        stage('build') {
+            steps {
+                sh 'ruby --version'
+            }
         }
     }
-  }
 }
