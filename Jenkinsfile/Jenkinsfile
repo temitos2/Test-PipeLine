@@ -10,7 +10,7 @@ pipeline {
 
 post {
   always {
-    archive 'test.xml'
+    archive 'Jenkinsfile/*'
   }
  }
 }
