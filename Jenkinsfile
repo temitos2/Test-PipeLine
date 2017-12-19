@@ -10,7 +10,7 @@
 
  post {
    always {
-     archiveartifacts artifacts: 'test.java' fingerprint: true
+     archiveartifacts artifacts: 'test.java', fingerprint: true
      }
    }
  }
