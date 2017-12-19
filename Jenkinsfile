@@ -10,7 +10,7 @@
 
  post {
    always {
-     archive 'jenkinsfile'
+     archive 'test.java'
      }
    }
  }
