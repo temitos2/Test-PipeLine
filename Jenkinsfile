@@ -8,3 +8,10 @@ pipeline {
         }
     }
 }
+
+post {
+  always {
+    archive 'jenkinsfile'
+    }
+  }
+}
