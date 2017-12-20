@@ -1,14 +1,13 @@
- pipeline {
-     agent { docker 'python:3.5.1' }
-
-     stages {
-        stage('test') {
+pipeline {
+    agent { docker 'node:6.3' }
+    stages {
+        stage('build') {
             steps {
-                sh 'python --version'
+                sh 'npm --version'
             }
         }
     }
-
+}
  post {
    always {
      archiveArtifacts artifacts: 'test.java' , fingerprint:true
