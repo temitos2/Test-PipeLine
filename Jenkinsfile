@@ -1,4 +1,4 @@
-pipeline {
+ pipeline {
     agent { docker 'node:6.3' }
     stages {
         stage('build') {
@@ -7,7 +7,7 @@ pipeline {
             }
         }
     }
-}
+ 
  post {
    always {
      archiveArtifacts artifacts: 'test.java' , fingerprint:true
